@@ -5,10 +5,12 @@ import Entry from "./Note";
 import CreateArea from "./CreateArea";
 
 function App() {
+    function addNote(note) {}
+
     return(
         <div className="html body">
             <Header />
-            <CreateArea />
+            <CreateArea onAdd={addNote} />
             <Entry key={1} title="Note title" content="Note content" />
             <Footer />
         </div>
