@@ -3,22 +3,20 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Entry from "./Note";
 import notes from "../notes";
-
-const createEntry = noteEntry => {
-    return(
-        <Entry 
-        key={noteEntry.id}
-        title={noteEntry.title}
-        content={noteEntry.content}
-        />
-    )
-}
+import CreateArea from "./CreateArea";
 
 function App() {
     return(
         <div className="html body">
             <Header />
-            {notes.map(createEntry)}
+            <CreateArea />
+            {notes.map((noteEntry) => (
+                    <Entry 
+                    key={noteEntry.key}
+                    title={noteEntry.title}
+                    content={noteEntry.content}
+                    />
+                ))}
             <Footer />
         </div>
     )
