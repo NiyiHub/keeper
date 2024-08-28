@@ -4,7 +4,15 @@ const date = new Date()
 const year = date.getFullYear()
 
 function Footer() {
-    return <p className="footer">Copyright <span>&#169;</span>  {year}</p>
+    return (
+        <footer>
+            <p className="footer">
+                Copyright 
+                <span>&#169;</span>  
+                {year}
+            </p>
+        </footer>
+    )
 }
 
 export default Footer;
